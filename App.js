@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, View, SafeAreaView } from 'react-native'
 
 import MainNav from './components/MainNav'
 import MainView from './components/MainView'
@@ -9,12 +9,12 @@ import RoadToggle from './components/RoadToggle'
 // TODO: Work on the style sheet
 // TODO: Add d3 for the chart
 
-const MainContainer = (props) => 
+const MainContainer = (props) =>
   <View style={styles.mainContainer}>
     {props.children}
   </View>
 
-const App = () => 
+const App = () =>
   <SafeAreaView style={styles.safeArea}>
     <MainContainer>
       <RoadToggle />
@@ -23,24 +23,20 @@ const App = () =>
     </MainContainer>
   </SafeAreaView>
 
-
 export default App
 
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#999',
-    // alignItems: 'stretch',
-    // justifyContent: 'space-between',
-    // width: "100%",
+    // backgroundColor: '#999',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   mainContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    // alignItems: 'stretch',
-    // justifyContent: 'space-between',
-    width: '90%',
-  }
-
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
+    width: '95%',
+  },
 })

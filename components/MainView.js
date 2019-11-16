@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import CurrPrice from './CurrPrice'
 import TimesView from './TimesView'
 
@@ -14,7 +14,8 @@ export default MainView
 
 const styles = StyleSheet.create({
   mainView: {
+    flex: 10,
     justifyContent: 'center',
-    backgroundColor: '#0f0'
+    backgroundColor: '#0f0',
   },
 })
