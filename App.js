@@ -1,19 +1,46 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+
+import MainNav from './components/MainNav'
+import MainView from './components/MainView'
+import RoadToggle from './components/RoadToggle'
+
+// TODO: Split my code
+// TODO: Work on the style sheet
+// TODO: Add d3 for the chart
+
+const MainContainer = (props) => 
+  <View style={styles.mainContainer}>
+    {props.children}
+  </View>
 
 const App = () => 
-<View style={styles.container}>
-  <Text>Open up App.js to start working on your app!</Text>
-</View>
+  <SafeAreaView style={styles.safeArea}>
+    <MainContainer>
+      <RoadToggle />
+      <MainView />
+      <MainNav />
+    </MainContainer>
+  </SafeAreaView>
 
 
-export default App 
+export default App
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#999',
+    // alignItems: 'stretch',
+    // justifyContent: 'space-between',
+    // width: "100%",
+  },
+
+  mainContainer: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    // alignItems: 'stretch',
+    // justifyContent: 'space-between',
+    width: '90%',
+  }
+
+})
