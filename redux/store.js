@@ -5,6 +5,7 @@ import log from './middleware/log'
 
 const middleware = [
   log,
+  // fetchInfo,
 ]
 
 const composeEnhancers =
@@ -12,10 +13,10 @@ const composeEnhancers =
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
     }) : compose
 
-    const enhancer = composeEnhancers(
-      applyMiddleware(...middleware),
-    )
+const enhancer = composeEnhancers(
+  applyMiddleware(...middleware),
+)
 
-    const store = createStore(rootReducer, enhancer)
+const store = createStore(rootReducer, enhancer)
 
-    export default store
+export default store
