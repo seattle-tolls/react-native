@@ -1,5 +1,9 @@
 import React from 'react'
-import { StyleSheet, View, SafeAreaView } from 'react-native'
+import { StyleSheet, View, SafeAreaView, Text } from 'react-native'
+
+import {Provider} from 'react-redux'
+
+import store from './redux/store'
 
 import MainNav from './components/MainNav'
 import MainView from './components/MainView'
@@ -15,6 +19,7 @@ const MainContainer = (props) =>
   </View>
 
 const App = () =>
+<Provider store={store}> 
   <SafeAreaView style={styles.safeArea}>
     <MainContainer>
       <RoadToggle />
@@ -22,6 +27,7 @@ const App = () =>
       <MainNav />
     </MainContainer>
   </SafeAreaView>
+  </Provider>
 
 export default App
 
