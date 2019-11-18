@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import CurrTime from './CurrTime'
-import TimesView from './TimesView'
+import ScheduleView from './ScheduleView'
 
 import { connect } from 'react-redux'
 
@@ -9,12 +9,15 @@ import { currentTimeInfo, todaySchedule } from '../redux/reducers'
 
 const MainView = ({ todaySchedule, currentTimeInfo }) => {
 
+  // console.table(currentTimeInfo )
+
   return (
-  <View style={styles.mainView}>
-    {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
-    {todaySchedule && <TimesView schedule={todaySchedule}/>}
-  </View>
-)}
+    <View style={styles.mainView}>
+      {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
+      {todaySchedule[0] && <ScheduleView currSchedule={todaySchedule} />}
+    </View>
+  )
+}
 
 const mapStateToProps = (state) => ({
   todaySchedule: todaySchedule(state),
