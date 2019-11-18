@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './reducers'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 import log from './middleware/log'
 
@@ -8,12 +9,12 @@ const middleware = [
   // fetchInfo,
 ]
 
-const composeEnhancers =
-  typeof window === 'object' &&
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-    }) : compose
+// const composeEnhancers =
+//   typeof window === 'object' &&
+//   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+//     }) : compose
 
-const enhancer = composeEnhancers(
+const enhancer = composeWithDevTools(
   applyMiddleware(...middleware),
 )
 
