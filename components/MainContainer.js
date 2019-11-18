@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View} from 'react-native'
 import { connect } from 'react-redux'
 
 import MainNav from './MainNav'
@@ -23,6 +23,9 @@ const MainContainer = () =>
 const mapStateToProps = (state) => {
   const { todayInfo } = state.toll
   console.log('INFO-->', todayInfo)
+
+  
+
   return { todayInfo }
 }
 
