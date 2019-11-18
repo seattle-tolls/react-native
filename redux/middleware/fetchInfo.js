@@ -14,7 +14,7 @@ const fetchInfo = ({ dispatch }) => next => async action => {
   if(action.type !== FETCH_TOLL_INFO)
     return next(action)
   try {
-    const payload = await fetch(`${API_URL}/api/toll`, inits)
+    const payload = await fetch(`${API_URL}/api/toll/temp`, inits)
     const data = await payload.json()
     dispatch(setTollInfo(data))
   }

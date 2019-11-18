@@ -3,8 +3,6 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchTollInfo } from '../redux/actions/toll'
 
-import { currentTimeInfo, todaySchedule } from '../redux/reducers'
-
 import MainNav from './MainNav'
 import MainView from './MainView'
 import RoadToggle from './RoadToggle'
@@ -14,7 +12,7 @@ const Container = (props) =>
     {props.children}
   </View>
 
-const MainContainer = ({ fetchTollInfo, todaySchedule, currentTimeInfo }) => {
+const MainContainer = ({ fetchTollInfo }) => {
 
   useEffect(() => {
     fetchTollInfo()
@@ -30,16 +28,12 @@ const MainContainer = ({ fetchTollInfo, todaySchedule, currentTimeInfo }) => {
     </SafeAreaView>
   )
 }
-const mapStateToProps = (state) => ({
-  todaySchedule: todaySchedule(state),
-  currentTimeInfo: currentTimeInfo(state),
-})
 
 const mapDispatchToProps = {
   fetchTollInfo,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainContainer)
+export default connect(null, mapDispatchToProps)(MainContainer)
 
 const styles = StyleSheet.create({
   safeArea: {
