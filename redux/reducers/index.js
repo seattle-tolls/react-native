@@ -7,5 +7,7 @@ const rootReducer = combineReducers({
 })
 
 export const todayInfo = state => fromTollReducer.todayInfo(state)
+export const todaySchedule = state => fromTollReducer.todaySchedule(state)
+export const currentTimeInfo = state => fromTollReducer.currentTimeInfo(state)
 
 export default rootReducer

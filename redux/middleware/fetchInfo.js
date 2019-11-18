@@ -8,18 +8,19 @@ const inits = {
     'Content-Type': 'application/json',
   },
 }
- 
-const fetchInfo =  ({ dispatch }) =>  next => async action => {
+
+const fetchInfo = ({ dispatch }) => next => async action => {
 
   if(action.type !== FETCH_TOLL_INFO)
-  return next(action)    
-    try {
-      const payload = await fetch(`${API_URL}/api/toll`, inits)
-      const data = await payload.json()
-      dispatch(setTollInfo(data))      
-    } catch (err) {
-      console.log('ERROR:', err)
-    }
+    return next(action)
+  try {
+    const payload = await fetch(`${API_URL}/api/toll`, inits)
+    const data = await payload.json()
+    dispatch(setTollInfo(data))
+  }
+  catch (err) {
+    console.log('ERROR:', err)
+  }
 }
 
 export default fetchInfo

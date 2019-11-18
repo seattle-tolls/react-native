@@ -1,6 +1,9 @@
-import React from 'react'
-import { SafeAreaView, StyleSheet, Text, View} from 'react-native'
+import React, { useEffect } from 'react'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import { connect } from 'react-redux'
+import { fetchTollInfo } from '../redux/actions/toll'
+
+import { currentTimeInfo, todaySchedule } from '../redux/reducers'
 
 import MainNav from './MainNav'
 import MainView from './MainView'
@@ -11,25 +14,32 @@ const Container = (props) =>
     {props.children}
   </View>
 
-const MainContainer = () =>
-  <SafeAreaView style={styles.safeArea}>
-    <Container>
-      <RoadToggle />
-      <MainView />
-      <MainNav />
-    </Container>
-  </SafeAreaView>
+const MainContainer = ({ fetchTollInfo, todaySchedule, currentTimeInfo }) => {
 
-const mapStateToProps = (state) => {
-  const { todayInfo } = state.toll
-  console.log('INFO-->', todayInfo)
+  useEffect(() => {
+    fetchTollInfo()
+  }, [])
 
-  
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <Container>
+        <RoadToggle />
+        <MainView />
+        <MainNav />
+      </Container>
+    </SafeAreaView>
+  )
+}
+const mapStateToProps = (state) => ({
+  todaySchedule: todaySchedule(state),
+  currentTimeInfo: currentTimeInfo(state),
+})
 
-  return { todayInfo }
+const mapDispatchToProps = {
+  fetchTollInfo,
 }
 
-export default connect(mapStateToProps)(MainContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer)
 
 const styles = StyleSheet.create({
   safeArea: {

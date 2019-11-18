@@ -5,5 +5,5 @@ export const setTollInfo = (payload) => ({
 })
 
 export const fetchTollInfo = () => ({
-  type: FETCH_TOLL_INFO
+  type: FETCH_TOLL_INFO,
 })

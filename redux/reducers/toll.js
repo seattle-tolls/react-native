@@ -1,7 +1,8 @@
 import { SET_TOLL_INFO } from '../constants/action-types'
+import { createSelector } from 'reselect'
 
 const initialState = {
-  todayInfo:{ today: 'some toll info' },
+  todayInfo:{},
   todaySchedule:{},
 }
 
@@ -15,5 +16,22 @@ const tollReducer = (toll = initialState, action) => {
 }
 
 export const todayInfo = state => state.toll.todayInfo
+export const todaySchedule = state => state.toll.todaySchedule
+
+export const currentTimeInfo = createSelector(
+  todayInfo,
+  todaySchedule,
+  (info, schedule) => {
+    for(let i = info.hour; i >= 0; i--){
+      if(schedule[i]){
+        return{
+          dayName: info.dayName,
+          holidayName: info.holidayName,
+          ...schedule[i],
+        }
+      }
+    }
+  }
+)
 
 export default tollReducer
