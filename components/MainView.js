@@ -8,13 +8,11 @@ import { connect } from 'react-redux'
 import { currentTimeInfo, todaySchedule } from '../redux/reducers'
 
 const MainView = ({ todaySchedule, currentTimeInfo }) => {
-  console.log('TODAY-->', todaySchedule)
-  console.log('CurrTimeInfo-->', currentTimeInfo)
 
   return (
   <View style={styles.mainView}>
-    <CurrTime currTime={currentTimeInfo} />
-    <TimesView schedule={todaySchedule}/>
+    {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
+    {todaySchedule && <TimesView schedule={todaySchedule}/>}
   </View>
 )}
 
