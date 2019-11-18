@@ -1,5 +1,5 @@
 const initialState = {
-  todayInfo:{toll: 'some toll info'},
+  todayInfo:{ today: 'some toll info' },
   todaySchedule:{},
 }
 
