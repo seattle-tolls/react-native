@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import CurrTime from './CurrTime'
+import GraphView from './GraphView'
 import ScheduleView from './ScheduleView'
 
 import { connect } from 'react-redux'
@@ -15,6 +16,8 @@ const MainView = ({ todaySchedule, currentTimeInfo }) => {
     <View style={styles.mainView}>
       {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
       {todaySchedule[0] && <ScheduleView currSchedule={todaySchedule} />}
+      {todaySchedule[0] && <GraphView currSchedule={todaySchedule} />}
+
     </View>
   )
 }
