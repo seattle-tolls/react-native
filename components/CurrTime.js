@@ -2,13 +2,9 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 const CurrTime = ({ currTime }) => {
-  console.log('CURR TIME -->', currTime)
-
   const {
-    dayName,
-    goodToGo,
-    holidayName,
-    payByMail,
+    dayName, goodToGo,
+    holidayName, payByMail,
     schedule,
   } = currTime
 

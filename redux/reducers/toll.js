@@ -18,6 +18,23 @@ const tollReducer = (toll = initialState, action) => {
 export const todayInfo = state => state.toll.todayInfo
 export const todaySchedule = state => state.toll.todaySchedule
 
+export const todayScheduleAsArray = createSelector(
+  todaySchedule,
+  (schedule) => {
+    if(schedule[0]){
+      const scheduleArray = Object.keys(schedule).map(hour => {
+        return ({
+          id: hour,
+          goodToGo: schedule[hour].goodToGo,
+          payByMail: schedule[hour].payByMail,
+          schedule: schedule[hour].schedule,
+        })
+      })
+      return scheduleArray
+    }
+  }
+)
+
 export const currentTimeInfo = createSelector(
   todayInfo,
   todaySchedule,

@@ -6,25 +6,22 @@ import ScheduleView from './ScheduleView'
 
 import { connect } from 'react-redux'
 
-import { currentTimeInfo, todaySchedule } from '../redux/reducers'
+import { currentTimeInfo, todayScheduleAsArray } from '../redux/reducers'
 
-const MainView = ({ todaySchedule, currentTimeInfo }) => {
-
-  // console.table(currentTimeInfo )
+const MainView = ({ currentTimeInfo, todaySchedule }) => {
 
   return (
     <View style={styles.mainView}>
       {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
-      {todaySchedule[0] && <ScheduleView currSchedule={todaySchedule} />}
-      {todaySchedule[0] && <GraphView currSchedule={todaySchedule} />}
-
+      {todaySchedule && <ScheduleView currSchedule={todaySchedule} />}
+      {todaySchedule && <GraphView currSchedule={todaySchedule} />}
     </View>
   )
 }
 
 const mapStateToProps = (state) => ({
-  todaySchedule: todaySchedule(state),
   currentTimeInfo: currentTimeInfo(state),
+  todaySchedule: todayScheduleAsArray(state),
 })
 
 export default connect(mapStateToProps)(MainView)

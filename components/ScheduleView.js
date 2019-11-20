@@ -11,28 +11,14 @@ function Item({ props }) {
   )
 }
 
-const ScheduleView = ({ currSchedule }) => {
-
-  const scheduleArray = Object.keys(currSchedule).map(hour => {
-    return ({
-      id: hour,
-      goodToGo: currSchedule[hour].goodToGo,
-      payByMail: currSchedule[hour].payByMail,
-      schedule: currSchedule[hour].schedule,
-    })
-  })
-  console.log('ARRAY SCHEDULE', scheduleArray)
-
-  return(
-    <View style={styles.scheduleView}>
-      <FlatList
-        data={scheduleArray}
-        renderItem={({ item }) => <Item props={item} />}
-        keyExtractor={item => item.id}
-      />
-    </View>
-  )
-}
+const ScheduleView = ({ currSchedule }) =>
+  <View style={styles.scheduleView}>
+    <FlatList
+      data={currSchedule}
+      renderItem={({ item }) => <Item props={item} />}
+      keyExtractor={item => item.id}
+    />
+  </View>
 
 export default ScheduleView
 
