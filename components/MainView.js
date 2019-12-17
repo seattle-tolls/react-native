@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import CurrTime from './CurrTime'
 import GraphView from './GraphView'
 import ScheduleView from './ScheduleView'
@@ -12,16 +12,18 @@ const MainView = ({ currentTimeInfo, todaySchedule }) => {
 
   return (
     <View style={styles.mainView}>
-      {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
+      {/* {currentTimeInfo && <CurrTime currTime={currentTimeInfo} />}
       {todaySchedule && <ScheduleView currSchedule={todaySchedule} />}
-      {todaySchedule && <GraphView currSchedule={todaySchedule} />}
+      {todaySchedule && <GraphView currSchedule={todaySchedule} />} */}
+
+      <Text>Hello world</Text>
     </View>
   )
 }
 
 const mapStateToProps = (state) => ({
-  currentTimeInfo: currentTimeInfo(state),
-  todaySchedule: todayScheduleAsArray(state),
+  // currentTimeInfo: currentTimeInfo(state),
+  // todaySchedule: todayScheduleAsArray(state),
 })
 
 export default connect(mapStateToProps)(MainView)

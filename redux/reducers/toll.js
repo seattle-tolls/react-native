@@ -1,10 +1,7 @@
 import { SET_TOLL_INFO } from '../constants/action-types'
 import { createSelector } from 'reselect'
 
-const initialState = {
-  todayInfo:{},
-  todaySchedule:{},
-}
+const initialState = {}
 
 const tollReducer = (toll = initialState, action) => {
   switch (action.type) {
@@ -14,6 +11,9 @@ const tollReducer = (toll = initialState, action) => {
       return toll
   }
 }
+// TODO: Fix the reducer signature
+
+// TODO: add the toggle reducer action thingy
 
 export const todayInfo = state => state.toll.todayInfo
 export const todaySchedule = state => state.toll.todaySchedule
