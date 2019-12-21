@@ -25,7 +25,7 @@ const MainContainer = ({ fetchTollInfo }) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <Fragment>
-        <ToggleSwitch str={'Toggle Switch'} toggleSwitch={toggleSwitch} />
+        <ToggleSwitch str={'Toggle Switch'} toggleSwitch={toggleSwitch} tollName={tollName} />
         <CurrentPrice str={tollName} />
         <GraphView str={'Graph View :)'} />
         <NavBar str={'Navigation'} />
