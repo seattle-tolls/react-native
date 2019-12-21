@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default ({ str }) =>
   <View style={styles.navBar}>
@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     width: '95%',
   },
-  
+
   textStyle: {
     color: 'white',
-  }
+  },
 })

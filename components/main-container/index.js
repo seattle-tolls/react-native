@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
@@ -9,18 +9,20 @@ import CurrentPrice from '../current-price'
 
 import { fetchTollInfo } from '../../redux/actions/toll'
 
+const switchHandler = (name) => {
+  console.log('NAME:', name)
+}
+
 const MainContainer = ({ fetchTollInfo }) => {
 
   useEffect(() => {
     // fetchTollInfo()
   }, [])
 
-  // TODO: get a few rough components to see how they fit
-
   return (
     <SafeAreaView style={styles.safeArea}>
       <Fragment>
-        <ToggleSwitch str={'Toggle Switch'} />
+        <ToggleSwitch str={'Toggle Switch'} switchHandler={switchHandler} />
         <CurrentPrice str={'Current Price'} />
         <GraphView str={'Graph View :)'} />
         <NavBar str={'Navigation'} />
