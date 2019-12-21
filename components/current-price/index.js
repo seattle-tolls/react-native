@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default ({ str }) =>
   <View style={styles.currPrice}>
@@ -13,5 +13,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'yellow',
-  }
+  },
 })
