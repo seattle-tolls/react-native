@@ -1,6 +1,8 @@
-import React, { useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
+
+import { TOLL_99 } from '../../redux/constants/toll-vars'
 
 import NavBar from '../nav-bar'
 import GraphView from '../graph-view'
@@ -11,17 +13,24 @@ import { fetchTollInfo } from '../../redux/actions/toll'
 
 const MainContainer = ({ fetchTollInfo }) => {
 
-  useEffect(() => {
-    // fetchTollInfo()
-  }, [])
+  const [tollName, setTollName] = useState(TOLL_99)
+  const toggleSwitch = (name) => {
+    setTollName(name)
+  }
 
-  // TODO: get a few rough components to see how they fit
+  useEffect(() => {
+    console.log(tollName)
+  }, [tollName])
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <Fragment>
-        <ToggleSwitch str={'Toggle Switch'} />
-        <CurrentPrice str={'Current Price'} />
+        <ToggleSwitch
+          str={'Toggle Switch'}
+          toggleSwitch={toggleSwitch}
+          tollName={tollName}
+        />
+        <CurrentPrice str={tollName} />
         <GraphView str={'Graph View :)'} />
         <NavBar str={'Navigation'} />
       </Fragment>
