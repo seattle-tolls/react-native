@@ -1,35 +1,50 @@
 import React from 'react'
-import { View, StyleSheet, Image, TouchableHighlight } from 'react-native'
-
+import { View, StyleSheet, TouchableHighlight } from 'react-native'
 
 import { TOLL_99, TOLL_520 } from '../../redux/constants/toll-vars'
 
-import sign99 from '../../assets/sign99.png'
-import sign520 from '../../assets/sign520.png'
+import Toll99Svg from '../svg/toll99'
+import Toll520Svg from '../svg/toll520'
 
-export default ({ toggleSwitch, tollName }) => {
-  const ToggleButton = ({ src, name }) => {
-    const { imageStyle, touchableStyle, selectedStyle } = styles
+const ToggleButton = ({
+  name, tollName,
+  toggleSwitch, children,
+}) => {
+  const { imageStyle, touchableStyle, selectedStyle } = styles
 
-    // TODO: GET SVG TO WORK
-    return (
-      <TouchableHighlight 
-      onPress={() => toggleSwitch(name)} 
+  return (
+    <TouchableHighlight
+      onPress={() => toggleSwitch(name)}
       style={[touchableStyle, name === tollName && selectedStyle]}
-      >
-        
-        <Image source={src} style={imageStyle}/> 
+    >
+      <View style={imageStyle}>
+        {children}
+      </View>
+    </TouchableHighlight>
+  )
+}
 
- </TouchableHighlight>
-    )
-  }
+export default ({
+  toggleSwitch,
+  tollName }) => {
   return (
     <View style={styles.toggleSwitchStyle}>
-      <ToggleButton src={sign99} name={TOLL_99}/>
-      <ToggleButton src={sign520} name={TOLL_520}/>
+      <ToggleButton
+        name={TOLL_99}
+        tollName={tollName}
+        toggleSwitch={toggleSwitch} >
+        <Toll99Svg/>
+      </ToggleButton>
+      <ToggleButton
+        name={TOLL_520}
+        tollName={tollName}
+        toggleSwitch={toggleSwitch} >
+        <Toll520Svg />
+      </ToggleButton>
     </View>
   )
 }
+
 const styles = StyleSheet.create({
   toggleSwitchStyle: {
     flex: 1,
@@ -41,19 +56,21 @@ const styles = StyleSheet.create({
   },
 
   selectedStyle: {
-    backgroundColor: 'black'
+    backgroundColor: 'black',
   },
-  
+
   touchableStyle: {
     borderRadius: 100,
-    backgroundColor: 'gray',
+    backgroundColor: '#888',
+    borderColor: 'black',
+    borderWidth: 3,
+    borderStyle: 'solid',
     margin: 20,
   },
 
   imageStyle: {
-    width:40,
-    height:40,
-    backgroundColor: 'black',
+    width:50,
+    height:50,
     margin: 10,
   },
 })
