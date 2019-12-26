@@ -19,6 +19,7 @@ const MainContainer = ({ fetchTollInfo }) => {
   }
 
   useEffect(() => {
+    fetchTollInfo()
     console.log(tollName)
   }, [tollName])
 
