@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
@@ -10,20 +10,19 @@ import ToggleSwitch from '../toggle-switch'
 import CurrentPrice from '../current-price'
 
 import { fetchTollInfo } from '../../redux/actions/toll'
-import { switchTollName } from '../../redux/actions/toll-name'
+import { setTollName } from '../../redux/actions/toll-name'
 import { tollInfo } from '../../redux/reducers'
 
-const MainContainer = ({ fetchTollInfo, switchTollName }) => {
+const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
 
-  const [tollName, setTollName] = useState(TOLL_99)
   const toggleSwitch = (name) => {
     setTollName(name)
   }
 
   useEffect(() => {
-    switchTollName(TOLL_99)
+    setTollName(TOLL_99)
     fetchTollInfo()
-  }, [tollName])
+  }, [])
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -50,7 +49,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   fetchTollInfo,
-  switchTollName,
+  setTollName,
 }
 
 const styles = StyleSheet.create({
