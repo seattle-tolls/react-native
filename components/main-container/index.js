@@ -10,8 +10,10 @@ import ToggleSwitch from '../toggle-switch'
 import CurrentPrice from '../current-price'
 
 import { fetchTollInfo } from '../../redux/actions/toll'
+import { switchTollName } from '../../redux/actions/toll-name'
+import { tollInfo } from '../../redux/reducers'
 
-const MainContainer = ({ fetchTollInfo }) => {
+const MainContainer = ({ fetchTollInfo, switchTollName }) => {
 
   const [tollName, setTollName] = useState(TOLL_99)
   const toggleSwitch = (name) => {
@@ -19,8 +21,8 @@ const MainContainer = ({ fetchTollInfo }) => {
   }
 
   useEffect(() => {
+    switchTollName(TOLL_99)
     fetchTollInfo()
-    console.log(tollName)
   }, [tollName])
 
   return (
@@ -39,8 +41,16 @@ const MainContainer = ({ fetchTollInfo }) => {
   )
 }
 
+const mapStateToProps = (state) => {
+  return { 
+    tollInfo: tollInfo(state),
+    tollName: state.tollName,
+  }
+}
+
 const mapDispatchToProps = {
-  fetchTollInfo: fetchTollInfo,
+  fetchTollInfo,
+  switchTollName,
 }
 
 const styles = StyleSheet.create({
@@ -52,4 +62,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default connect(null, mapDispatchToProps)(MainContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer)

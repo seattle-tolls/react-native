@@ -11,44 +11,47 @@ const tollReducer = (toll = initialState, action) => {
       return toll
   }
 }
-// TODO: Fix the reducer signature
 
-// TODO: add the toggle reducer action thingy
+export const tollInfo = (state) => {
+  return state
+}
 
-export const todayInfo = state => state.toll.todayInfo
-export const todaySchedule = state => state.toll.todaySchedule
+// TODO: fix the other selectors according with the derived data
 
-export const todayScheduleAsArray = createSelector(
-  todaySchedule,
-  (schedule) => {
-    if(schedule[0]){
-      const scheduleArray = Object.keys(schedule).map(hour => {
-        return ({
-          id: hour,
-          goodToGo: schedule[hour].goodToGo,
-          payByMail: schedule[hour].payByMail,
-          schedule: schedule[hour].schedule,
-        })
-      })
-      return scheduleArray
-    }
-  }
-)
+// export const todayInfo = state => state.toll.todayInfo
+// export const todaySchedule = state => state.toll.todaySchedule
 
-export const currentTimeInfo = createSelector(
-  todayInfo,
-  todaySchedule,
-  (info, schedule) => {
-    for(let i = info.hour; i >= 0; i--){
-      if(schedule[i]){
-        return{
-          dayName: info.dayName,
-          holidayName: info.holidayName,
-          ...schedule[i],
-        }
-      }
-    }
-  }
-)
+// export const todayScheduleAsArray = createSelector(
+//   todaySchedule,
+//   (schedule) => {
+//     if(schedule[0]){
+//       const scheduleArray = Object.keys(schedule).map(hour => {
+//         return ({
+//           id: hour,
+//           goodToGo: schedule[hour].goodToGo,
+//           payByMail: schedule[hour].payByMail,
+//           schedule: schedule[hour].schedule,
+//         })
+//       })
+//       return scheduleArray
+//     }
+//   }
+// )
+
+// export const currentTimeInfo = createSelector(
+//   todayInfo,
+//   todaySchedule,
+//   (info, schedule) => {
+//     for(let i = info.hour; i >= 0; i--){
+//       if(schedule[i]){
+//         return{
+//           dayName: info.dayName,
+//           holidayName: info.holidayName,
+//           ...schedule[i],
+//         }
+//       }
+//     }
+//   }
+// )
 
 export default tollReducer

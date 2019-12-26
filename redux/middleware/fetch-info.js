@@ -11,8 +11,6 @@ const inits = {
 }
 
 const fetchInfo = ({ dispatch }) => next => async action => {
-  console.log(AWS_API_KEY)
-
   if(action.type !== FETCH_TOLL_INFO)
     return next(action)
   try {
@@ -21,12 +19,8 @@ const fetchInfo = ({ dispatch }) => next => async action => {
 
     const dataObj = dataArr.reduce((curr, next) => {
       let { toll, name, date, data } = next
-      console.log('NEXT-->', name)
       return curr = { ...curr, [toll]:{ name, date, data } }
     }, {})
-
-    console.log('DATAs-->', dataObj)
-
     dispatch(setTollInfo(dataObj))
   }
   catch (err) {
