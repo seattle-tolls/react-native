@@ -5,10 +5,6 @@ import store from './redux/store'
 
 import MainContainer from './components/main-container'
 
-// TODO: Split my code
-// TODO: Work on the style sheet
-// TODO: Add d3 for the chart
-
 const App = () =>
   <Provider store={ store }>
     <MainContainer />

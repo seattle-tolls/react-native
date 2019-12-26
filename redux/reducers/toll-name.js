@@ -12,7 +12,7 @@ const tollNameReducer = (tollName = initialState, action) => {
   }
 }
 
-// TODO: finish the get name selector
+// FIXME: finish the get name selector
 export const getName = state => {
   console.log('TOLLNAME-->', state.tollName)
 }

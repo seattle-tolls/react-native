@@ -10,6 +10,7 @@ const inits = {
   },
 }
 
+// TODO: check if there are info coming from the db
 const fetchInfo = ({ dispatch }) => next => async action => {
   if(action.type !== FETCH_TOLL_INFO)
     return next(action)
@@ -17,6 +18,11 @@ const fetchInfo = ({ dispatch }) => next => async action => {
     const payload = await fetch(`${API_URL}/api/v1/tolls`, inits)
     const dataArr = await payload.json()
 
+    if (!Array.isArray(dataArr)){
+      console.log('ERROR:', dataArr.message)
+      return next(action)
+    }
+    
     const dataObj = dataArr.reduce((curr, next) => {
       let { toll, name, date, data } = next
       return curr = { ...curr, [toll]:{ name, date, data } }

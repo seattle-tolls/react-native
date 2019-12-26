@@ -14,7 +14,8 @@ import { setTollName } from '../../redux/actions/toll-name'
 import { tollInfo } from '../../redux/reducers'
 
 const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
-
+  // TODO: IMPORTANT create a function that tells if it's a weekday or weekend
+  // TODO: create a function that tells the current time
   const toggleSwitch = (name) => {
     setTollName(name)
   }
