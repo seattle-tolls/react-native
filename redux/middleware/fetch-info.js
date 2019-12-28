@@ -22,7 +22,7 @@ const fetchInfo = ({ dispatch }) => next => async action => {
       console.log('ERROR:', dataArr.message)
       return next(action)
     }
-    
+
     const dataObj = dataArr.reduce((curr, next) => {
       let { toll, name, date, data } = next
       return curr = { ...curr, [toll]:{ name, date, data } }

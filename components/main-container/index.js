@@ -42,7 +42,7 @@ const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { 
+  return {
     tollInfo: tollInfo(state),
     tollName: state.tollName,
   }
