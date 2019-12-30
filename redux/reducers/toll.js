@@ -13,10 +13,12 @@ const tollReducer = (toll = initialState, action) => {
 }
 
 export const tollInfo = (state) => {
-  return state
+  const tollInfoObj = state.toll[state.tollName]
+  console.log('TOLL INFO', tollInfoObj && tollInfoObj.name)
+  return tollInfoObj
 }
 
-// TODO: fix the other selectors according with the derived data
+// FIXME: fix the other selectors according with the derived data
 
 // export const todayInfo = state => state.toll.todayInfo
 // export const todaySchedule = state => state.toll.todaySchedule

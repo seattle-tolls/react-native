@@ -15,6 +15,7 @@ import { tollInfo } from '../../redux/reducers'
 
 const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
 
+  // TODO: create a clock that keeps track of the time in redux
   const toggleSwitch = (name) => {
     setTollName(name)
   }
@@ -41,7 +42,7 @@ const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { 
+  return {
     tollInfo: tollInfo(state),
     tollName: state.tollName,
   }
