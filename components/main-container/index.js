@@ -10,18 +10,21 @@ import ToggleSwitch from '../toggle-switch'
 import CurrentPrice from '../current-price'
 
 import { fetchTollInfo } from '../../redux/actions/toll'
+import { setTollName } from '../../redux/actions/toll-name'
+import { tollInfo } from '../../redux/reducers'
 
-const MainContainer = ({ fetchTollInfo }) => {
+const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
 
-  const [tollName, setTollName] = useState(TOLL_99)
+  // TODO: create a clock that keeps track of the time in redux
   const toggleSwitch = (name) => {
     setTollName(name)
   }
 
   useEffect(() => {
-    console.log(tollName)
-  }, [tollName])
-
+    setTollName(TOLL_99)
+    fetchTollInfo()
+  }, [])
+  
   return (
     <SafeAreaView style={styles.safeArea}>
       <Fragment>
@@ -38,8 +41,16 @@ const MainContainer = ({ fetchTollInfo }) => {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    tollInfo: tollInfo(state),
+    tollName: state.tollName,
+  }
+}
+
 const mapDispatchToProps = {
-  fetchTollInfo: fetchTollInfo,
+  fetchTollInfo,
+  setTollName,
 }
 
 const styles = StyleSheet.create({
@@ -51,4 +62,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default connect(null, mapDispatchToProps)(MainContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer)
