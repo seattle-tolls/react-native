@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
@@ -14,8 +14,8 @@ import { setTollName } from '../../redux/actions/toll-name'
 import { tollInfo } from '../../redux/reducers'
 
 const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
-  // TODO: IMPORTANT create a function that tells if it's a weekday or weekend
-  // TODO: create a function that tells the current time
+
+  // TODO: create a clock that keeps track of the time in redux
   const toggleSwitch = (name) => {
     setTollName(name)
   }
@@ -24,7 +24,7 @@ const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
     setTollName(TOLL_99)
     fetchTollInfo()
   }, [])
-
+  
   return (
     <SafeAreaView style={styles.safeArea}>
       <Fragment>
