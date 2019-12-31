@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
@@ -24,7 +24,7 @@ const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
     setTollName(TOLL_99)
     fetchTollInfo()
   }, [])
-  
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <Fragment>
