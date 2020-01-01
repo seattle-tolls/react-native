@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`REDUX ACTIONS Toll Name action should run the toll name action 1`] = `
+Object {
+  "payload": "fakeToll",
+  "type": "SET_TOLL_NAME",
+}
+`;
+
+exports[`REDUX ACTIONS Toll action should run fetch toll action 1`] = `
+Object {
+  "type": "FETCH_TOLL_INFO",
+}
+`;
+
+exports[`REDUX ACTIONS Toll action should run set toll action 1`] = `
+Object {
+  "payload": Object {
+    "toll1": "one",
+    "toll2": "two",
+  },
+  "type": "SET_TOLL_INFO",
+}
+`;

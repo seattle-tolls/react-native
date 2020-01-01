@@ -1,21 +1,25 @@
 import { fetchTollInfo, setTollInfo } from '../../src/redux/actions/toll'
-import { FETCH_TOLL_INFO, SET_TOLL_INFO } from '../../src/redux/constants/action-types'
+import { setTollName } from '../../src/redux/actions/toll-name'
 
 describe('REDUX ACTIONS', ()=>{
-  describe('toll', ()=>{
+  describe('Toll action', ()=>{
     it('should run fetch toll action', () => {
-      const fetchToll = fetchTollInfo()
-      expect(fetchToll.type).toBe(FETCH_TOLL_INFO)
+      const fetchToll = fetchTollInfo()  
+      expect(fetchToll).toMatchSnapshot()
     })
 
     it('should run set toll action', () => {
       const payload = {toll1: 'one', toll2: 'two'}
       const setToll = setTollInfo(payload)
-      
-      expect(setToll.type).toBe(SET_TOLL_INFO)
-      expect(setToll.payload.toll1).toBe('one')
-      expect(setToll.payload.toll2).toBe('two')
+      expect(setToll).toMatchSnapshot()
     })
   })
 
+  describe('Toll Name action', () => {
+    it('should run the toll name action', () => {
+      const payload = 'fakeToll'
+      const tollName = setTollName(payload)
+      expect(tollName).toMatchSnapshot()
+    })
+  })
 })
