@@ -4,7 +4,7 @@ exports[`DAY CHECKER checks that today's information is passing without argument
 Object {
   "dayName": "Wednesday",
   "holidayName": "New Years Day",
-  "hour": 0,
+  "hour": 1,
   "isWeekendOrHoliday": true,
 }
 `;
