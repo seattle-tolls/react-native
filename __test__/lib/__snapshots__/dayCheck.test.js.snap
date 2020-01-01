@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DAY CHECKER checks that today's information is passing without arguments 1`] = `
+Object {
+  "dayName": "Wednesday",
+  "holidayName": "New Years Day",
+  "hour": 0,
+  "isWeekendOrHoliday": true,
+}
+`;
+
+exports[`DAY CHECKER returns the information of Sunday 2019-12-15 at 9am 1`] = `
+Object {
+  "dayName": "Sunday",
+  "holidayName": null,
+  "hour": 9,
+  "isWeekendOrHoliday": true,
+}
+`;
+
+exports[`DAY CHECKER returns the information of Thursday 2019-11-22 at 7am 1`] = `
+Object {
+  "dayName": "Thursday",
+  "holidayName": null,
+  "hour": 7,
+  "isWeekendOrHoliday": false,
+}
+`;
+
+exports[`DAY CHECKER returns the information of Wednesday 2019-12-25 at 6pm 1`] = `
+Object {
+  "dayName": "Wednesday",
+  "holidayName": "Christmas Day",
+  "hour": 18,
+  "isWeekendOrHoliday": true,
+}
+`;
