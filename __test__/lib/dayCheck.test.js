@@ -3,7 +3,7 @@ const dayChecker = require('../../src/lib/dayChecker')
 describe('DAY CHECKER', () => {
   it(`checks that today's information is passing without arguments`, () => {
     const currDate = dayChecker()
-    expect(currDate).toMatchSnapshot()
+    expect(currDate).toBeTruthy()
   })
 
   it('returns the information of Wednesday 2019-12-25 at 6pm', () => {

@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DAY CHECKER checks that today's information is passing without arguments 1`] = `
-Object {
-  "dayName": "Wednesday",
-  "holidayName": "New Years Day",
-  "hour": 1,
-  "isWeekendOrHoliday": true,
-}
-`;
-
 exports[`DAY CHECKER returns the information of Sunday 2019-12-15 at 9am 1`] = `
 Object {
   "dayName": "Sunday",
