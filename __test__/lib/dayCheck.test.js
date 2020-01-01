@@ -4,7 +4,7 @@ describe('DAY CHECKER', () => {
   it(`checks that today's information is passing without arguments`, () => {
     const currDate = dayChecker()
     expect(currDate).toMatchSnapshot()
-})
+  })
 
   it('returns the information of Wednesday 2019-12-25 at 6pm', () => {
     const currDate = dayChecker('2019-12-25 18:00')
