@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ACTIONS actions/toll should run fetchTollInfo 1`] = `
+Object {
+  "type": "FETCH_TOLL_INFO",
+}
+`;
+
+exports[`ACTIONS actions/toll should run setTollInfo on the 'fakeToll' 1`] = `
+Object {
+  "payload": Object {
+    "fakeToll": Object {
+      "name": "fake toll name",
+    },
+  },
+  "type": "SET_TOLL_INFO",
+}
+`;
+
+exports[`ACTIONS actions/toll should run setTollInfo on the 'toll99' 1`] = `
+Object {
+  "payload": Object {
+    "toll99": Object {
+      "name": "99 tunnel",
+    },
+  },
+  "type": "SET_TOLL_INFO",
+}
+`;
+
+exports[`ACTIONS actions/toll should run setTollInfo on the 'toll520' 1`] = `
+Object {
+  "payload": Object {
+    "toll520": Object {
+      "name": "520 toll bridge",
+    },
+  },
+  "type": "SET_TOLL_INFO",
+}
+`;

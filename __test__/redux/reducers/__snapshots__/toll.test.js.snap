@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`REDUCERS reducer/toll should set the toll reducer 1`] = `
-Array [
-  Object {
+Object {
+  "toll520": Object {
     "data": Object {
       "weekdays": Object {
         "0": Object {
@@ -104,11 +104,10 @@ Array [
         },
       },
     },
-    "date": 1577868480729,
+    "date": 1577906804692,
     "name": "520 Bridge",
-    "toll": "toll520",
   },
-  Object {
+  "toll99": Object {
     "data": Object {
       "weekdays": Object {
         "15": Object {
@@ -150,13 +149,8 @@ Array [
         },
       },
     },
-    "date": 1577868480729,
+    "date": 1577906804692,
     "name": "99 Tunnel",
-    "toll": "toll99",
   },
-]
+}
 `;
-
-exports[`REDUCERS reducer/toll-name should set the toll name reducer to toll99 1`] = `"toll99"`;
-
-exports[`REDUCERS reducer/toll-name should set the toll name reducer to toll520 1`] = `"toll520"`;

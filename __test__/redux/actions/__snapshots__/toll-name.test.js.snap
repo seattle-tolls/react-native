@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ACTIONS actions/toll-name should run setTollName on toll99 1`] = `
+Object {
+  "payload": "toll99",
+  "type": "SET_TOLL_NAME",
+}
+`;
+
+exports[`ACTIONS actions/toll-name should run setTollName on toll520 1`] = `
+Object {
+  "payload": "toll520",
+  "type": "SET_TOLL_NAME",
+}
+`;
