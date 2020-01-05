@@ -154,3 +154,5 @@ Object {
   },
 }
 `;
+
+exports[`REDUCERS reducer/toll should test for unknown action for tollReducer 1`] = `"undefined"`;

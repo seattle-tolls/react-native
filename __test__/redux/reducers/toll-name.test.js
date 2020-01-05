@@ -13,5 +13,11 @@ describe('REDUCERS', () => {
         expect(reducer).toMatchSnapshot()
       })
     })
+
+    it('should test for unknown action for tollNameReducer', () => {
+      const reducer = tollNameReducer(initialState, { type: 'FAKE_ACTION' })
+      expect(reducer).toBe(initialState)
+      expect(reducer).toMatchSnapshot()
+    })
   })
 })
