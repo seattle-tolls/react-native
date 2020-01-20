@@ -1,4 +1,4 @@
-const dayChecker = require('../../src/lib/dayChecker')
+const dayChecker = require('../../src/lib/day-checker')
 
 describe('DAY CHECKER', () => {
   it(`checks that today's information is passing without arguments`, () => {

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LOG MIDDLEWARE middleware/log should process the log fn 1`] = `
+exports[`MIDDLEWARE middleware/log should process the log fn 1`] = `
 Array [
   Array [
     Object {
-      "type": "SAMPLE_ACTION",
+      "type": "LOGGING_SOMETHING",
     },
   ],
 ]
