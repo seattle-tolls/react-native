@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`REDUCERS reducer/toll-name should set the toll name reducer to toll99 1`] = `"toll99"`;
+
+exports[`REDUCERS reducer/toll-name should set the toll name reducer to toll520 1`] = `"toll520"`;
+
+exports[`REDUCERS reducer/toll-name should test for unknown action for tollNameReducer 1`] = `"undefined"`;

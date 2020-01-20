@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, StyleSheet, TouchableHighlight } from 'react-native'
 
-import { TOLL_99, TOLL_520 } from '../../redux/constants/toll-vars'
+import { TOLL_99, TOLL_520 } from '../redux/constants/toll-vars'
 
-import Toll99Svg from '../svg/toll99'
-import Toll520Svg from '../svg/toll520'
+import Toll99Svg from '../assets/svg/toll99'
+import Toll520Svg from '../assets/svg/toll520'
 
 const ToggleButton = ({
   name, tollName,

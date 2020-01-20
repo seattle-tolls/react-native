@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MIDDLEWARE middleware/log should process the log fn 1`] = `
+Array [
+  Array [
+    Object {
+      "type": "LOGGING_SOMETHING",
+    },
+  ],
+]
+`;

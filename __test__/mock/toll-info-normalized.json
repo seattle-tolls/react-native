@@ -1,0 +1,152 @@
+{
+  "toll520": {
+    "data": {
+      "weekdays": {
+        "0": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "Midnight to 4:59 a.m."
+        },
+        "10": {
+          "goodToGo": 2.7,
+          "payByMail": 4.7,
+          "schedule": "10 a.m. to 1:59 p.m."
+        },
+        "14": {
+          "goodToGo": 3.4,
+          "payByMail": 5.4,
+          "schedule": "2 p.m. to 2:59 p.m."
+        },
+        "15": {
+          "goodToGo": 4.3,
+          "payByMail": 6.3,
+          "schedule": "3 p.m. to 5:59 p.m."
+        },
+        "18": {
+          "goodToGo": 3.4,
+          "payByMail": 5.4,
+          "schedule": "6 p.m. to 6:59 p.m."
+        },
+        "19": {
+          "goodToGo": 2.7,
+          "payByMail": 4.7,
+          "schedule": "7 p.m. to 8:59 p.m."
+        },
+        "21": {
+          "goodToGo": 2,
+          "payByMail": 4,
+          "schedule": "9 p.m. to 10:59 p.m."
+        },
+        "23": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "11 p.m. to 11:59 p.m."
+        },
+        "5": {
+          "goodToGo": 2,
+          "payByMail": 4,
+          "schedule": "5 a.m. to 5:59 a.m."
+        },
+        "6": {
+          "goodToGo": 3.4,
+          "payByMail": 5.4,
+          "schedule": "6 a.m. to 6:59 a.m."
+        },
+        "7": {
+          "goodToGo": 4.3,
+          "payByMail": 6.3,
+          "schedule": "7 a.m. to 8:59 a.m."
+        },
+        "9": {
+          "goodToGo": 3.4,
+          "payByMail": 5.4,
+          "schedule": "9 a.m. to 9:59 a.m."
+        }
+      },
+      "weekend": {
+        "0": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "Midnight to 4:59 a.m."
+        },
+        "11": {
+          "goodToGo": 2.65,
+          "payByMail": 4.65,
+          "schedule": "11 a.m. to 5:59 p.m."
+        },
+        "18": {
+          "goodToGo": 2.05,
+          "payByMail": 4.05,
+          "schedule": "6 p.m. to 8:59 p.m."
+        },
+        "21": {
+          "goodToGo": 1.4,
+          "payByMail": 3.4,
+          "schedule": "9 p.m. to 10:59 p.m."
+        },
+        "23": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "11 p.m. to 11:59 p.m."
+        },
+        "5": {
+          "goodToGo": 1.4,
+          "payByMail": 3.4,
+          "schedule": "5 a.m. to 7:59 a.m."
+        },
+        "8": {
+          "goodToGo": 2.05,
+          "payByMail": 4.05,
+          "schedule": "8 a.m. to 10:59 a.m."
+        }
+      }
+    },
+    "date": 1577906804692,
+    "name": "520 Bridge"
+  },
+  "toll99": {
+    "data": {
+      "weekdays": {
+        "15": {
+          "goodToGo": 2.25,
+          "payByMail": 4.25,
+          "schedule": "3 p.m. to 6 p.m."
+        },
+        "18": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "6 p.m. to 11 p.m."
+        },
+        "23": {
+          "goodToGo": 1,
+          "payByMail": 3,
+          "schedule": "11 p.m. to 6 a.m."
+        },
+        "6": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "6 a.m. to 7 a.m."
+        },
+        "7": {
+          "goodToGo": 1.5,
+          "payByMail": 3.5,
+          "schedule": "7 a.m. to 9 a.m."
+        },
+        "9": {
+          "goodToGo": 1.25,
+          "payByMail": 3.25,
+          "schedule": "9 a.m. to 3 p.m."
+        }
+      },
+      "weekend": {
+        "0": {
+          "goodToGo": 1,
+          "payByMail": 3,
+          "schedule": "All day"
+        }
+      }
+    },
+    "date": 1577906804692,
+    "name": "99 Tunnel"
+  }
+}

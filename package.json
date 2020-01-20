@@ -10,6 +10,9 @@
     "eject": "expo eject",
     "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=19001'"
   },
+  "jest": {
+    "preset": "jest-expo"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "d3": "^5.14.2",
@@ -29,7 +32,11 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^8.0.0",
-    "jest": "^24.9.0"
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^24.9.0",
+    "jest-enzyme": "^7.1.2",
+    "jest-expo": "^36.0.1"
   },
   "private": true
 }
