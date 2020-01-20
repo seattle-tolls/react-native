@@ -60,7 +60,12 @@
     "__TITLE__": false,
     "__DEBUG__": false,
     "before": false,
-    "after": false
+    "after": false,
+    "next": true,
+    "dispatch": true,
+    "getState": true,
+    "middleware": true
+
   },
   "extends": [
     "eslint:recommended"
