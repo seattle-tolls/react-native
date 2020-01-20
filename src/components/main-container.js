@@ -2,16 +2,16 @@ import React, { useEffect, Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
-import { TOLL_99 } from '../../redux/constants/toll-vars'
+import { TOLL_99 } from '../redux/constants/toll-vars'
 
-import NavBar from '../nav-bar'
-import GraphView from '../graph-view'
-import ToggleSwitch from '../toggle-switch'
-import CurrentPrice from '../current-price'
+import NavBar from './nav-bar'
+import GraphView from './graph-view'
+import ToggleSwitch from './toggle-switch'
+import CurrentPrice from './current-price'
 
-import { fetchTollInfo } from '../../redux/actions/toll'
-import { setTollName } from '../../redux/actions/toll-name'
-import { tollInfo } from '../../redux/reducers'
+import { fetchTollInfo } from '../redux/actions/toll'
+import { setTollName } from '../redux/actions/toll-name'
+import { tollInfo } from '../redux/reducers'
 
 const MainContainer = ({ fetchTollInfo, setTollName, tollName }) => {
 
