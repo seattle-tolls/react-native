@@ -7,7 +7,7 @@ configure({ adapter: new Adapter() })
 
 import CurrentPrice from '../../../src/components/current-price'
 
-const props = {str:'$3.30'}
+const props = { str:'$3.30' }
 
 describe('<CurrentPrice />', () => {
   let wrapper
@@ -17,6 +17,6 @@ describe('<CurrentPrice />', () => {
 
   it('Renders correctly', () => {
     expect(wrapper.props()).toMatchSnapshot()
-    expect(wrapper.props().children.props.children).toBe(props.str)
+    expect(wrapper.find('Text').contains(props.str)).toBe(true)
   })
 })

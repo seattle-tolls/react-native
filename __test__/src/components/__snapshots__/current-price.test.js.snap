@@ -14,5 +14,3 @@ Object {
   },
 }
 `;
-
-exports[`<CurrentPrice /> Renders correctly 2`] = `"<View style=\\"width:95%;flex:5;align-items:center;justify-content:center;background-color:yellow\\"><Text>$3.30</Text></View>"`;
