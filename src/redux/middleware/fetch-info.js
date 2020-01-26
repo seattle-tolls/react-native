@@ -1,6 +1,7 @@
 import { FETCH_TOLL_INFO } from '../constants/action-types'
 import { API_URL, AWS_API_KEY } from 'react-native-dotenv'
 import { setTollInfo } from '../actions/toll'
+import fetcher from '../../lib/fetcher'
 
 const inits = {
   method: 'GET',
@@ -15,8 +16,7 @@ const fetchInfo = ({ dispatch }) => next => async action => {
   if(action.type !== FETCH_TOLL_INFO)
     return next(action)
   try {
-    const payload = await fetch(`${API_URL}/api/v1/tolls`, inits)
-    const dataArr = await payload.json()
+    const dataArr = await fetcher(`${API_URL}/api/v1/tolls`, inits)
 
     if (!Array.isArray(dataArr)){
       console.log('ERROR:', dataArr.message)
