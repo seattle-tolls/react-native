@@ -5,7 +5,7 @@ import { shallow, configure } from 'enzyme'
 
 configure({ adapter: new Adapter() })
 
-import CurrentPrice from '../../../src/components/current-price'
+import CurrentPrice from '../../src/components/current-price'
 
 const props = { str:'$3.30' }
 
