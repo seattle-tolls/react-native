@@ -1,10 +1,22 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import PropTypes from 'prop-types'
 
-export default ({ str }) =>
+// TODO: add all the components that I need to make the current price available
+const CurrentPrice = ({
+  goodToGo, payByMail, schedule, dayName, holidayName,
+}) =>
   <View style={styles.currPrice}>
-    <Text>{str}</Text>
+    { holidayName && <Text>{holidayName}</Text> }
+    <Text>{dayName}</Text>
+    <Text>Good To Go</Text>
+    <Text>{goodToGo}</Text>
+    <Text>Pay By Mail</Text>
+    <Text>{payByMail}</Text>
+    <Text>{schedule}</Text>
   </View>
+
+export default CurrentPrice
 
 const styles = StyleSheet.create({
   currPrice: {
@@ -15,3 +27,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
   },
 })
+
+CurrentPrice.propTypes = {
+  schedule: PropTypes.string.isRequired,
+  goodToGo: PropTypes.string.isRequired,
+  payByMail: PropTypes.string.isRequired,
+  dayName: PropTypes.string.isRequired,
+  holidayName: PropTypes.string,
+}
