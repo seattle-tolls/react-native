@@ -9,18 +9,22 @@ Object {
     <Text>
       Wednesday
     </Text>,
-    <Text>
-      Good To Go
-    </Text>,
-    <Text>
-      $3.40
-    </Text>,
-    <Text>
-      Pay By Mail
-    </Text>,
-    <Text>
-      $5.40
-    </Text>,
+    <View>
+      <Text>
+        Good To Go
+      </Text>
+      <Text>
+        $3.40
+      </Text>
+    </View>,
+    <View>
+      <Text>
+        Pay By Mail
+      </Text>
+      <Text>
+        $5.40
+      </Text>
+    </View>,
     <Text>
       6 a.m. to 6:59 a.m.
     </Text>,
@@ -42,18 +46,22 @@ Object {
     <Text>
       Monday
     </Text>,
-    <Text>
-      Good To Go
-    </Text>,
-    <Text>
-      $2.70
-    </Text>,
-    <Text>
-      Pay By Mail
-    </Text>,
-    <Text>
-      $4.70
-    </Text>,
+    <View>
+      <Text>
+        Good To Go
+      </Text>
+      <Text>
+        $2.70
+      </Text>
+    </View>,
+    <View>
+      <Text>
+        Pay By Mail
+      </Text>
+      <Text>
+        $4.70
+      </Text>
+    </View>,
     <Text>
       10 a.m. to 1:59 p.m.
     </Text>,
@@ -75,18 +83,22 @@ Object {
     <Text>
       Saturday
     </Text>,
-    <Text>
-      Good To Go
-    </Text>,
-    <Text>
-      $1.40
-    </Text>,
-    <Text>
-      Pay By Mail
-    </Text>,
-    <Text>
-      $3.40
-    </Text>,
+    <View>
+      <Text>
+        Good To Go
+      </Text>
+      <Text>
+        $1.40
+      </Text>
+    </View>,
+    <View>
+      <Text>
+        Pay By Mail
+      </Text>
+      <Text>
+        $3.40
+      </Text>
+    </View>,
     <Text>
       9 p.m. to 10:59 p.m.
     </Text>,
@@ -108,18 +120,22 @@ Object {
     <Text>
       Wednesday
     </Text>,
-    <Text>
-      Good To Go
-    </Text>,
-    <Text>
-      $1.25
-    </Text>,
-    <Text>
-      Pay By Mail
-    </Text>,
-    <Text>
-      $3.25
-    </Text>,
+    <View>
+      <Text>
+        Good To Go
+      </Text>
+      <Text>
+        $1.25
+      </Text>
+    </View>,
+    <View>
+      <Text>
+        Pay By Mail
+      </Text>
+      <Text>
+        $3.25
+      </Text>
+    </View>,
     <Text>
       Midnight to 4:59 a.m.
     </Text>,

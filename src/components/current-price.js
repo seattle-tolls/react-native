@@ -9,10 +9,14 @@ const CurrentPrice = ({
   <View style={styles.currPrice}>
     { holidayName && <Text>{holidayName}</Text> }
     <Text>{dayName}</Text>
-    <Text>Good To Go</Text>
-    <Text>{goodToGo}</Text>
-    <Text>Pay By Mail</Text>
-    <Text>{payByMail}</Text>
+    <View>
+      <Text>Good To Go</Text>
+      <Text>{goodToGo}</Text>
+    </View>
+    <View>
+      <Text>Pay By Mail</Text>
+      <Text>{payByMail}</Text>
+    </View>
     <Text>{schedule}</Text>
   </View>
 
