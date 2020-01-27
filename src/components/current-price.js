@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import PropTypes from 'prop-types'
 
-// TODO: add all the components that I need to make the current price available
+// TODO: add styles
 const CurrentPrice = ({
   goodToGo, payByMail, schedule, dayName, holidayName,
 }) =>

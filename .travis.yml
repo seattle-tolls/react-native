@@ -11,6 +11,10 @@ addons:
 env:
   - CXX=g++-4.8
 sudo: required
-before_script: yarn add
+before_script: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
 script:
   - yarn test
