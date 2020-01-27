@@ -1,10 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CurrentPrice /> Renders correctly 1`] = `
+exports[`<CurrentPrice /> should render component for Christmas Day 1`] = `
 Object {
-  "children": <Text>
-    $3.30
-  </Text>,
+  "children": Array [
+    <Text>
+      Christmas Day
+    </Text>,
+    <Text>
+      Wednesday
+    </Text>,
+    <Text>
+      Good To Go
+    </Text>,
+    <Text>
+      $3.40
+    </Text>,
+    <Text>
+      Pay By Mail
+    </Text>,
+    <Text>
+      $5.40
+    </Text>,
+    <Text>
+      6 a.m. to 6:59 a.m.
+    </Text>,
+  ],
+  "style": Object {
+    "alignItems": "center",
+    "backgroundColor": "yellow",
+    "flex": 5,
+    "justifyContent": "center",
+    "width": "95%",
+  },
+}
+`;
+
+exports[`<CurrentPrice /> should render component for Monday 1`] = `
+Object {
+  "children": Array [
+    undefined,
+    <Text>
+      Monday
+    </Text>,
+    <Text>
+      Good To Go
+    </Text>,
+    <Text>
+      $2.70
+    </Text>,
+    <Text>
+      Pay By Mail
+    </Text>,
+    <Text>
+      $4.70
+    </Text>,
+    <Text>
+      10 a.m. to 1:59 p.m.
+    </Text>,
+  ],
+  "style": Object {
+    "alignItems": "center",
+    "backgroundColor": "yellow",
+    "flex": 5,
+    "justifyContent": "center",
+    "width": "95%",
+  },
+}
+`;
+
+exports[`<CurrentPrice /> should render component for Saturday 1`] = `
+Object {
+  "children": Array [
+    undefined,
+    <Text>
+      Saturday
+    </Text>,
+    <Text>
+      Good To Go
+    </Text>,
+    <Text>
+      $1.40
+    </Text>,
+    <Text>
+      Pay By Mail
+    </Text>,
+    <Text>
+      $3.40
+    </Text>,
+    <Text>
+      9 p.m. to 10:59 p.m.
+    </Text>,
+  ],
+  "style": Object {
+    "alignItems": "center",
+    "backgroundColor": "yellow",
+    "flex": 5,
+    "justifyContent": "center",
+    "width": "95%",
+  },
+}
+`;
+
+exports[`<CurrentPrice /> should render component for Wednesday 1`] = `
+Object {
+  "children": Array [
+    undefined,
+    <Text>
+      Wednesday
+    </Text>,
+    <Text>
+      Good To Go
+    </Text>,
+    <Text>
+      $1.25
+    </Text>,
+    <Text>
+      Pay By Mail
+    </Text>,
+    <Text>
+      $3.25
+    </Text>,
+    <Text>
+      Midnight to 4:59 a.m.
+    </Text>,
+  ],
   "style": Object {
     "alignItems": "center",
     "backgroundColor": "yellow",
